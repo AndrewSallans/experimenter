@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
     session: Ember.computed('model', {
         get: function() {
             var session = this.get('store').createRecord(this.get('model.sessionCollectionId'), {
-                experimentId: this.get('experiment.id'),
+                experimentId: this.get('model.id'),
                 profileId: 'tester0.prof1', // TODO fetch from service
                 profileVersion: '',
                 softwareVersion: ''
